@@ -1,6 +1,6 @@
 // Số thiên thần
 
-var input = `-1 `;
+var input = `2111 `;
 
 function processData(input) {
   var input = input.replace(/(\n)/g, " ");
@@ -24,6 +24,7 @@ function processData(input) {
           console.log(numString);
         }
       }
+      break;
     }
   }
 }
@@ -45,6 +46,6 @@ checkNum = (x) => {
   return x;
 };
 
-console.log(checkNum(5));
+console.log(checkNum(2111));
 
 console.log(processData(input));
