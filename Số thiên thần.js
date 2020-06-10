@@ -1,6 +1,6 @@
 // Số thiên thần
 
-var input = `2111 `;
+var input = `1204132 `;
 
 function processData(input) {
   var input = input.replace(/(\n)/g, " ");
@@ -13,39 +13,46 @@ function processData(input) {
 
   var newInput = newInputFilter.map((x) => parseInt(x));
 
-  var num = newInput[0];
+  var num = newInput[0]; // 10
 
   for (let i = num; 2 <= i <= 100000; i++) {
-    if (i === checkNum(i)) {
-      var numString = i.toString();
-
-      for (let j = 0; j < numString.length; j++) {
-        if (numString[j] === numString[numString.length - 1 - j]) {
-          console.log(numString);
-        }
-      }
+    if (checkNum(i) && checkAngle(i)) {
+      console.log(i);
       break;
     }
   }
 }
 
+// Check số nguyên tố
 checkNum = (x) => {
   if (x < 2) {
-    return 0;
+    return false;
   } else if (x == 2) {
-    return x;
+    return true;
   } else if (x % 2 == 0) {
-    return 0;
+    return false;
   } else {
     for (let j = 3; j < x - 1; j += 2) {
       if (x % j == 0) {
-        return 0;
+        return false;
       }
     }
   }
-  return x;
+  return true;
 };
 
-console.log(checkNum(2111));
+// Check đối xứng
+checkAngle = (y) => {
+  var yText = y.toString();
+  var check = true;
+  for (var i = 0; i < yText.length; i++) {
+    if (yText[i] !== yText[yText.length - 1 - i]) {
+      check = false;
+      break;
+    }
+  }
+  if (check) return true;
+  else return false;
+};
 
 console.log(processData(input));
