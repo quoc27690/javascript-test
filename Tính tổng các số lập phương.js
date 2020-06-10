@@ -1,18 +1,18 @@
 // Tính tổng các số lập phương
 
 var input = `4
-1 2 8 3 `;
+1 2 -8 3 `;
 
 function processData(input) {
-  var input = input.replace(/(\n)/g, " ");
+  var input = input.replace(/(\n)/g, " "); // "4 1 2 -8 3 "
 
-  var newInputString = input.split(" ");
+  var newInputString = input.split(" "); // [ '4', '1', '2', '-8', '3', '' ]
 
   var newInputFilter = newInputString.filter(function (el) {
     if (el !== "") return el;
-  });
+  }); // [ '4', '1', '2', '-8', '3' ]
 
-  var newInput = newInputFilter.map((x) => parseInt(x));
+  var newInput = newInputFilter.map((x) => parseInt(x)); // [ 4, 1, 2, -8, 3 ]
 
   if (newInput[0] <= 1000) {
     var result = 0;
@@ -25,6 +25,7 @@ function processData(input) {
       if (checkNumAbs < limitNum) {
         var checkNum = Math.cbrt(checkNumAbs);
 
+        // Check có phải là số nguyên hay ko sau khi căn bậc 3
         if (Number.isInteger(checkNum)) {
           result += newInput[i];
         }
@@ -34,4 +35,4 @@ function processData(input) {
   }
 }
 
-console.log(processData(input));
+console.log(processData(input)); // 9
