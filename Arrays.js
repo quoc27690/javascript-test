@@ -1,3 +1,5 @@
+// Arrays
+
 var nums = [4, 2, 5, 6];
 
 function getSecondLargest(nums) {

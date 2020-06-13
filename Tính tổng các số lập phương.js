@@ -35,4 +35,4 @@ function processData(input) {
   }
 }
 
-console.log(processData(input)); // 9
+console.log(processData(input)); // -7
