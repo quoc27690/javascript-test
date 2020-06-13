@@ -1,4 +1,4 @@
-// Loops
+// Vowels And Consonants
 
 var s = "javascriptloops";
 

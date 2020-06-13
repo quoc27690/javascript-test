@@ -1,4 +1,4 @@
-// Conditional Statements: Switch
+// Get Letter
 
 function getLetter(s) {
   let letter;
@@ -20,4 +20,4 @@ function getLetter(s) {
   return letter;
 }
 
-console.log(getLetter("dfdfdfs"));
+console.log(getLetter("dfdfdfs")); // B

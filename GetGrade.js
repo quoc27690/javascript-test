@@ -1,4 +1,4 @@
-// Conditional Statements: If-Else
+// Get Grade
 
 function getGrade(score) {
   return "FFEDCBA"[Math.floor(score / 5.0)];

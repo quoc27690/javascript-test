@@ -1,4 +1,4 @@
-// Arrays
+// Get Second Largest
 
 var nums = [4, 2, 5, 6];
 
